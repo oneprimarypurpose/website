@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — One Primary Purpose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F7F4EF;--sand:#EFE8DC;--ink:#20313F;--ink-soft:#4C5C68;--ink-faint:#76838C;--gold:#BC8438;--gold-deep:#9A6A26;--sage:#6F8C84;--line:rgba(32,49,63,.12);--line-soft:rgba(32,49,63,.07);--shadow:0 1px 2px rgba(32,49,63,.04),0 12px 30px -18px rgba(32,49,63,.25)}
+  *{box-sizing:border-box}html,body{margin:0}
+  body{background:var(--paper);color:var(--ink);font-family:"Mulish",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;color:var(--ink);margin:0}
+  a{color:var(--gold-deep)}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+  .ph{color:var(--gold-deep);font-weight:700}
+
+  .bar{position:sticky;top:0;z-index:10;background:rgba(247,244,239,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar .row{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+  .bar a{text-decoration:none;font-weight:600;font-size:.92rem}
+  .bar .home{color:var(--ink)}
+  .bar nav a{margin-left:20px;color:var(--ink-soft)}
+  .bar nav a.active{color:var(--gold-deep)}
+
+  .head{background:var(--sand);border-bottom:1px solid var(--line)}
+  .head .row{max-width:1000px;margin:0 auto;padding:54px 24px}
+  .head h1{font-size:clamp(2.2rem,5.5vw,3.4rem);line-height:1.05;letter-spacing:-.015em;margin-top:14px}
+  .head .lead{margin:16px 0 0;max-width:50ch;color:var(--ink-soft);font-size:1.1rem}
+
+  /* jump nav */
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 8px}
+  .jump a{font-size:.86rem;font-weight:600;text-decoration:none;color:var(--ink);
+    background:var(--sand);border:1px solid var(--line);padding:6px 13px;border-radius:999px}
+  .jump a:hover{border-color:var(--gold);color:var(--gold-deep)}
+
+  main{padding:30px 0 10px}
+
+  /* resource card */
+  .card{background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:6px 0 14px;box-shadow:var(--shadow)}
+  .card h2{font-size:1.25rem;margin:0 0 4px}
+  .card p{margin:6px 0 0;color:var(--ink-soft)}
+  .card .meta{font-size:.92rem;color:var(--ink-faint);margin-top:10px}
+  .card .meta b{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+    background:var(--gold);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;
+    padding:11px 20px;border-radius:999px;transition:background .15s}
+  .btn:hover{background:var(--gold-deep)}
+  .note{font-size:.88rem;color:var(--ink-faint);margin-top:12px}
+
+  .role{padding:30px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
+  .role .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+  .role h2{font-size:1.7rem;letter-spacing:-.01em;margin:6px 0 0}
+  .role .summary{font-family:"Fraunces",serif;font-size:1.1rem;color:var(--ink);margin:10px 0 0;font-weight:400}
+  .role h3{font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin:22px 0 4px;font-family:"Mulish",sans-serif;font-weight:700}
+  .role p{margin:8px 0;color:var(--ink-soft)}
+  ul,ol{margin:8px 0;padding-left:22px;color:var(--ink-soft)}
+  li{margin:7px 0}
+  strong,b{color:var(--ink);font-weight:700}
+
+  .callout{background:#FBF3E2;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;margin:16px 0}
+  .callout.warn{border-left-color:#C0392B;background:#FBEEEC}
+  .callout .ct{font-weight:700;color:var(--gold-deep);margin-bottom:2px}
+  .callout.warn .ct{color:#C0392B}
+  .callout p{margin:0;color:var(--ink-soft)}
+
+  .more{font-size:.92rem;color:var(--ink-faint);margin-top:14px}
+
+  footer{background:var(--ink);color:#cdd6dc;padding:40px 0;text-align:center;font-size:.92rem;margin-top:30px}
+  footer a{color:#E2B873;text-decoration:none}
+  :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:4px}
+  @media(max-width:680px){.bar nav a{margin-left:14px}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="row">
+  <a class="home" href="index.html">&larr; One Primary Purpose</a>
+  <nav><a href="guidelines.html">Guidelines</a><a href="service-positions.html">Service positions</a><a href="resources.html" class="active">Resources</a></nav>
+</div></div>
+
+<header class="head"><div class="row">
+  <p class="eyebrow">For trusted servants</p>
+  <h1>Resources</h1>
+  <p class="lead">The meeting script and the step-by-step setup for running the meeting on Zoom — everything a secretary, host, or co-host needs to keep the meeting running.</p>
+</div></header>
+
+<main><div class="wrap">
+
+  <div class="jump">
+    <a href="#script">Meeting script</a>
+    <a href="#zoom-host">Zoom Host setup</a>
+    <a href="#zoom-cohost">Zoom Co-Host setup</a>
+  </div>
+
+  <!-- MEETING SCRIPT -->
+  <section id="script" style="scroll-margin-top:72px;padding-top:24px">
+    <div class="card">
+      <div class="eyebrow">Secretary format</div>
+      <h2>Meeting Script</h2>
+      <p>The full secretary format — readings, announcements, Seventh Tradition, newcomer and chip-meeting language, speaker introduction, and the closing. Read it through before you chair.</p>
+      <div class="meta">Meeting ID&nbsp; <b>139&nbsp;842&nbsp;662</b> &nbsp;&middot;&nbsp; Password&nbsp; <b>101293</b></div>
+      <a class="btn" href="https://drive.google.com/file/d/1pg519vROSexRiN3fqjRSPYylxo-IYxSE/view" target="_blank" rel="noopener">
+        Open the script &nearr;
+      </a>
+      <p class="note">Opens in Google Drive. You'll need to be signed in with an account the group has shared it with.</p>
+    </div>
+  </section>
+
+  <!-- ZOOM HOST SETUP -->
+  <section class="role" id="zoom-host">
+    <div class="tag">Online &middot; security</div>
+    <h2>Zoom Host setup</h2>
+    <p class="summary">How to start and lock down the meeting so it runs smoothly and stays safe from disruption.</p>
+
+    <h3>Before the meeting (~15 min early)</h3>
+    <ol>
+      <li>Sign in to Zoom on the <b>account that owns the meeting</b> <span class="ph">[ Steve / Roger ]</span> and start it from there — this is the only way you hold the host controls.</li>
+      <li>Open <b>Security</b> (the shield in the toolbar) and confirm <b>Waiting Room</b> is <b>on</b>.</li>
+      <li>Confirm participants <b>join muted</b> and with <b>video off</b> by default.</li>
+      <li>Under <b>Security</b>, set <b>Share Screen</b> to <b>Host &amp; Co-Host only</b>, and leave <b>Rename Themselves</b> off.</li>
+      <li>When the co-host joins, hover their tile &rarr; <b>More</b> &rarr; <b>Make Co-Host</b>.</li>
+    </ol>
+
+    <h3>During the meeting</h3>
+    <ul>
+      <li>Admit <b>known members</b> from the Waiting Room (let the co-host handle most of this).</li>
+      <li>Post the <b>Venmo</b> (Seventh Tradition) and <b>meeting-confirmation</b> messages in the chat.</li>
+      <li><b>Spotlight</b> the speaker and make sure the room's audio carries to Zoom.</li>
+      <li>Keep an eye out for disruption — stop video, mute, or remove as needed.</li>
+    </ul>
+
+    <h3>After the meeting</h3>
+    <ul>
+      <li>Send <b>meeting confirmations</b> to anyone who privately messaged their email.</li>
+    </ul>
+
+    <div class="callout warn">
+      <div class="ct">If the meeting is disrupted</div>
+      <p>Stop video / mute / remove the disruptor. If there are several, use <b>Security &rarr; Suspend Participant Activities</b> to freeze everything and lock the meeting. If it won't stop, end and restart with new credentials shared only with known members.</p>
+    </div>
+  </section>
+
+  <!-- ZOOM CO-HOST SETUP -->
+  <section class="role" id="zoom-cohost">
+    <div class="tag">In person &middot; second computer</div>
+    <h2>Zoom Co-Host setup</h2>
+    <p class="summary">The security partner who runs the Zoom side from the second computer in the room — the meeting's second set of eyes.</p>
+
+    <div class="callout warn">
+      <div class="ct">Avoid audio feedback</div>
+      <p>The host's computer carries the room audio. Keep this second computer's <b>mic and speaker off</b> (or wear headphones), or the two computers will echo. You manage by watching the screen.</p>
+    </div>
+
+    <h3>Before the meeting</h3>
+    <ol>
+      <li>Arrive in person and sit at the <b>second computer</b>.</li>
+      <li>Join the Zoom meeting, then ask the host to <b>Make you Co-Host</b>.</li>
+      <li><b>Mute your mic and turn your speaker off</b> (or use headphones) before anything else — this is the #1 cause of feedback.</li>
+    </ol>
+
+    <h3>During the meeting</h3>
+    <ul>
+      <li><b>Vet and admit</b> people from the Waiting Room. Hold anyone with a <b>blank, random, or odd name</b> until you can confirm them.</li>
+      <li>Watch the participant list — stop video, mute, or remove disruptors, and alert the host.</li>
+      <li>Keep an eye on the <b>chat</b>.</li>
+      <li>Stay in the background — <b>protect</b> the meeting, don't co-pilot it. Keep names and emails confidential.</li>
+    </ul>
+  </section>
+
+</div></main>
+
+<footer><div class="wrap">
+  <a href="service-positions.html">&larr; Service positions</a> &nbsp;·&nbsp; <a href="index.html">Back to welcome &rarr;</a>
+</div></footer>
+</body>
+</html>
