@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Service Positions — One Primary Purpose</title>
+<title>Service Position Guides — One Primary Purpose</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,28 +27,32 @@
   .head{background:var(--sand);border-bottom:1px solid var(--line)}
   .head .row{max-width:1000px;margin:0 auto;padding:54px 24px}
   .head h1{font-size:clamp(2.2rem,5.5vw,3.4rem);line-height:1.05;letter-spacing:-.015em;margin-top:14px}
-  .head .lead{margin:16px 0 0;max-width:50ch;color:var(--ink-soft);font-size:1.1rem}
+  .head .lead{margin:16px 0 0;max-width:54ch;color:var(--ink-soft);font-size:1.1rem}
 
-  /* jump nav */
   .jump{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 8px}
   .jump a{font-size:.86rem;font-weight:600;text-decoration:none;color:var(--ink);
     background:var(--sand);border:1px solid var(--line);padding:6px 13px;border-radius:999px}
   .jump a:hover{border-color:var(--gold);color:var(--gold-deep)}
 
   main{padding:30px 0 10px}
-  .req{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:6px 0 30px}
+  .req{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:6px 0 18px}
   .req h2{font-size:1.15rem;margin:0 0 8px}
   .req ul{margin:0;padding-left:20px;color:var(--ink-soft)}
 
   .role{padding:30px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
+  .role .rolehead{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
   .role .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
   .role h2{font-size:1.7rem;letter-spacing:-.01em;margin:6px 0 0}
   .role .summary{font-family:"Fraunces",serif;font-size:1.1rem;color:var(--ink);margin:10px 0 0;font-weight:400}
   .role h3{font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin:22px 0 4px;font-family:"Mulish",sans-serif;font-weight:700}
   .role p{margin:8px 0;color:var(--ink-soft)}
   ul,ol{margin:8px 0;padding-left:22px;color:var(--ink-soft)}
-  li{margin:6px 0}
+  li{margin:7px 0}
   strong,b{color:var(--ink);font-weight:700}
+
+  .printbtn{flex:none;background:none;border:1px solid var(--line);color:var(--ink-soft);
+    font:inherit;font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:999px;cursor:pointer}
+  .printbtn:hover{border-color:var(--gold);color:var(--gold-deep)}
 
   .callout{background:#FBF3E2;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;margin:16px 0}
   .callout.warn{border-left-color:#C0392B;background:#FBEEEC}
@@ -56,25 +60,39 @@
   .callout.warn .ct{color:#C0392B}
   .callout p{margin:0;color:var(--ink-soft)}
 
-  .more{font-size:.92rem;color:var(--ink-faint);margin-top:14px}
-
   footer{background:var(--ink);color:#cdd6dc;padding:40px 0;text-align:center;font-size:.92rem;margin-top:30px}
   footer a{color:#E2B873;text-decoration:none}
   :focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:4px}
   @media(max-width:680px){.bar nav a{margin-left:14px}}
+
+  /* PRINT — hard copy is the primary medium */
+  @media print{
+    .bar,.jump,.head .lead,.head .eyebrow,footer,.printbtn,.toprint-note{display:none !important}
+    body{background:#fff;font-size:12pt}
+    .head{background:#fff;border:none}
+    .head .row{padding:0 0 8px}
+    .head h1{font-size:20pt;margin:0}
+    .wrap{max-width:none;padding:0}
+    main{padding:0}
+    .role{border-top:1px solid #000;page-break-inside:avoid;break-inside:avoid;padding:14px 0}
+    .role + .role{page-break-before:always}
+    .req{page-break-after:always;border:1px solid #000;box-shadow:none}
+    a{color:#000;text-decoration:none}
+    .callout{border:1px solid #000;background:#fff}
+  }
 </style>
 </head>
 <body>
 
 <div class="bar"><div class="row">
   <a class="home" href="index.html">&larr; One Primary Purpose</a>
-  <nav><a href="guidelines.html">Guidelines</a><a href="service-positions.html" class="active">Service positions</a><a href="guides.html">Guides</a><a href="resources.html">Resources</a></nav>
+  <nav><a href="guidelines.html">Guidelines</a><a href="service-positions.html">Service positions</a><a href="guides.html" class="active">Guides</a><a href="resources.html">Resources</a></nav>
 </div></div>
 
 <header class="head"><div class="row">
-  <p class="eyebrow">Service</p>
-  <h1>Service positions</h1>
-  <p class="lead">Service keeps the meeting alive — one addict helping the next. Each position is filled by group conscience. Here's what each one does.</p>
+  <p class="eyebrow">Trusted-servant handbooks</p>
+  <h1>Service position guides</h1>
+  <p class="lead">The full guide for each service position — what it is, who can serve, and the duties. Built to print: use the <b>Print</b> button on any guide for a clean hard-copy handout, or print the whole page.</p>
 </div></header>
 
 <main><div class="wrap">
@@ -89,77 +107,83 @@
   </div>
 
   <div class="req">
-    <h2>General requirements for trusted servants</h2>
+    <h2>General requirements for all trusted servants</h2>
     <ul>
       <li>Willingness and desire to serve</li>
       <li>Actively working the Twelve Steps and Twelve Traditions of Narcotics Anonymous</li>
-      <li>Active participation in the group they serve</li>
+      <li>Active participation in the group</li>
       <li>A suggested minimum of <span class="ph">[ clean time — e.g., 1 year ]</span> for lead and chairing positions</li>
-      <li>A <span class="ph">[ commitment length — e.g., 1 year ]</span> commitment, and attendance at the monthly Business Meeting</li>
+      <li>A <span class="ph">[ commitment length — e.g., 1 year ]</span> commitment, with attendance at the monthly Business Meeting</li>
     </ul>
   </div>
 
   <section class="role" id="secretaries">
-    <div class="tag">Three-person rotation</div>
+    <div class="rolehead"><div class="tag">Three-person rotation</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>Secretaries</h2>
-    <p class="summary">Three trusted servants who take turns chairing the weekly meeting.</p>
+    <p class="summary">Three trusted servants who take turns chairing the weekly meeting, so the responsibility is shared and every Sunday is covered.</p>
     <h3>Duties</h3>
     <ul>
-      <li>Open and lead the meeting using the group's approved format.</li>
+      <li>Open and lead the meeting using the group's approved format (the secretary script).</li>
       <li>Welcome newcomers and visitors warmly.</li>
       <li>Keep the meeting on time and on format.</li>
       <li>Coordinate the rotation so every Sunday is covered.</li>
       <li>Hand off cleanly to the next secretary in the rotation.</li>
     </ul>
+    <p class="more">The full secretary format — readings, announcements, Seventh Tradition, newcomer and chip-meeting language, speaker introduction, and the closing — is the <a href="resources.html#script">Meeting Script</a>. Read it through before you chair.</p>
   </section>
 
   <section class="role" id="zoom-host">
-    <div class="tag">Online &middot; security</div>
+    <div class="rolehead"><div class="tag">Online &middot; security</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>Zoom Host</h2>
-    <p class="summary">Runs the meeting on Zoom and holds the host controls and security settings.</p>
-    <h3>Before the meeting</h3>
-    <ul>
-      <li>Start the meeting from the account that owns it, ~15 minutes early, so you hold host controls.</li>
-      <li>Make the co-host as soon as they join.</li>
-      <li>Confirm Waiting Room is on, and that people join muted with video off.</li>
-      <li>Confirm screen sharing is set to host &amp; co-host only.</li>
-    </ul>
+    <p class="summary">Starts the meeting, holds the host controls, and keeps the meeting running smoothly and safe from disruption.</p>
+    <h3>Before the meeting (~15 minutes early)</h3>
+    <ol>
+      <li>Sign in to Zoom on the <b>account that owns the meeting</b> <span class="ph">[ Steve / Roger ]</span> and start it from there — the only way you hold host controls.</li>
+      <li>Open <b>Security</b> and confirm <b>Waiting Room</b> is <b>on</b>.</li>
+      <li>Confirm participants <b>join muted</b> and with <b>video off</b> by default.</li>
+      <li>Set <b>Share Screen</b> to <b>Host &amp; Co-Host only</b>; leave <b>Rename Themselves</b> off.</li>
+      <li>When the Co-Host joins, hover their tile &rarr; <b>More</b> &rarr; <b>Make Co-Host</b>.</li>
+    </ol>
     <h3>During the meeting</h3>
     <ul>
-      <li>Admit known members from the Waiting Room.</li>
-      <li>Post the Venmo and meeting-confirmation messages in the chat.</li>
-      <li>Spotlight the speaker; make sure the room audio carries.</li>
-      <li>Watch for disruption; stop video, mute, or remove as needed.</li>
-      <li>Send meeting confirmations afterward.</li>
+      <li>Admit <b>known members</b> from the Waiting Room (let the Co-Host handle most of this).</li>
+      <li>Post the <b>Venmo</b> and <b>meeting-confirmation</b> messages in the chat.</li>
+      <li><b>Spotlight</b> the speaker; make sure the room audio carries to Zoom.</li>
+      <li>Watch for disruption — stop video, mute, or remove as needed.</li>
     </ul>
+    <h3>After the meeting</h3>
+    <ul><li>Send <b>meeting confirmations</b> to anyone who privately messaged their email.</li></ul>
     <div class="callout warn">
       <div class="ct">If the meeting is disrupted</div>
-      <p>Stop video / mute / remove the disruptor. If there are several, use <b>Security → Suspend Participant Activities</b> to freeze everything and lock the meeting. If it won't stop, end and restart with new credentials shared only with known members.</p>
+      <p>Stop video / mute / remove the disruptor. If there are several, use <b>Security &rarr; Suspend Participant Activities</b> to freeze everything and lock the meeting. If it won't stop, end and restart with new credentials shared only with known members.</p>
     </div>
-    <p class="more">Full operational detail lives in the printable <a href="guides.html#zoom-host">Zoom Host guide</a>.</p>
   </section>
 
   <section class="role" id="zoom-cohost">
-    <div class="tag">In person &middot; second computer</div>
+    <div class="rolehead"><div class="tag">In person &middot; second computer</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>Zoom Co-Host</h2>
     <p class="summary">The meeting's second set of eyes — the security partner who runs the Zoom side from the second computer in the room.</p>
     <div class="callout warn">
       <div class="ct">Avoid audio feedback</div>
-      <p>The host's computer carries the room audio. Keep the second computer's <b>mic and speaker off</b> (or wear headphones), or the two computers will echo. You manage by watching the screen.</p>
+      <p>The host's computer carries the room audio. Keep this second computer's <b>mic and speaker off</b> (or wear headphones), or the two computers will echo. You manage by watching the screen.</p>
     </div>
-    <h3>Duties</h3>
+    <h3>Before the meeting</h3>
+    <ol>
+      <li>Arrive in person and sit at the <b>second computer</b>.</li>
+      <li>Join the Zoom meeting, then ask the Host to <b>Make you Co-Host</b>.</li>
+      <li><b>Mute your mic and turn your speaker off</b> (or use headphones) before anything else — the #1 cause of feedback.</li>
+    </ol>
+    <h3>During the meeting</h3>
     <ul>
-      <li>Attend in person and sit at the second computer.</li>
-      <li>Vet and admit people from the Waiting Room; hold anyone with a blank, random, or odd name.</li>
-      <li>Watch the participants; stop video, mute, or remove disruptors, and alert the host.</li>
-      <li>Keep an eye on the chat.</li>
-      <li>Stay in the background — protect the meeting, don't co-pilot it. Keep names and emails confidential.</li>
+      <li><b>Vet and admit</b> people from the Waiting Room; hold anyone with a <b>blank, random, or odd name</b>.</li>
+      <li>Watch the participant list — stop video, mute, or remove disruptors, and alert the host.</li>
+      <li>Keep an eye on the <b>chat</b>.</li>
+      <li>Stay in the background — <b>protect</b> the meeting, don't co-pilot it. Keep names and emails confidential.</li>
     </ul>
-    <p class="more">Full operational detail lives in the printable <a href="guides.html#zoom-cohost">Zoom Co-Host guide</a>.</p>
   </section>
 
   <section class="role" id="gsr">
-    <div class="tag">Area service</div>
+    <div class="rolehead"><div class="tag">Area service</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>GSR &amp; Alternate GSR</h2>
     <p class="summary">The Group Service Representative carries the group's voice to Area and brings information back.</p>
     <h3>Duties</h3>
@@ -172,21 +196,21 @@
   </section>
 
   <section class="role" id="treasurer">
-    <div class="tag">Finances</div>
+    <div class="rolehead"><div class="tag">Finances</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>Treasurer</h2>
     <p class="summary">Cares for the group's funds so it can keep carrying the message.</p>
     <h3>Duties</h3>
     <ul>
       <li>Count and safeguard the Seventh Tradition contributions — the in-person basket and Venmo (<a href="https://venmo.com/u/Steve-Melton-8">@Steve-Melton-8</a>).</li>
       <li>Pay the group's expenses, such as rent and coffee.</li>
-      <li>Maintain the prudent reserve of <span class="ph">$ ____</span>.</li>
+      <li>Maintain the prudent reserve of <span class="ph">[ $ ____ ]</span>.</li>
       <li>Give the Treasury report at the Business Meeting.</li>
       <li>Carry out group-conscience donations to the next level of service.</li>
     </ul>
   </section>
 
   <section class="role" id="business-chair">
-    <div class="tag">Governance</div>
+    <div class="rolehead"><div class="tag">Governance</div><button class="printbtn" onclick="window.print()">Print</button></div>
     <h2>Business Meeting Chair</h2>
     <p class="summary">Leads the monthly Business Meeting and keeps the group's records. <span class="ph">May be a Secretary or a separate position — group to decide.</span></p>
     <h3>Duties</h3>
@@ -197,13 +221,23 @@
       <li>Takes the minutes and emails them to the group.</li>
       <li>Serves as tie-breaker in a vote.</li>
     </ul>
-    <p class="more">The Business Meeting is held the second Sunday of each month, right after the regular meeting. See the agenda on the <a href="guidelines.html#business">Group Guidelines</a> page.</p>
+    <h3>The Business Meeting</h3>
+    <p>Held the <b>second Sunday of each month</b>, immediately after the regular meeting. All are welcome; all attendees have a voice and a vote.</p>
+    <ol>
+      <li><b>Open</b> — Serenity Prayer; take attendance.</li>
+      <li><b>Minutes</b> — additions or changes; approve the previous minutes.</li>
+      <li><b>Reports</b> — GSR report; Treasurer report.</li>
+      <li><b>Old Business</b></li>
+      <li><b>New Business</b></li>
+      <li><b>Open Forum</b></li>
+      <li><b>Closing prayer</b></li>
+    </ol>
   </section>
 
 </div></main>
 
 <footer><div class="wrap">
-  <a href="index.html">&larr; Back to welcome</a> &nbsp;·&nbsp; <a href="guidelines.html">Group guidelines &rarr;</a>
+  <a href="service-positions.html">&larr; Service positions</a> &nbsp;·&nbsp; <a href="index.html">Back to welcome &rarr;</a>
 </div></footer>
 </body>
 </html>
