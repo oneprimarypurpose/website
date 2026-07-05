@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Group Guidelines — One Primary Purpose</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +22,7 @@
   .bar .row{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
   .bar a{text-decoration:none;font-weight:600;font-size:.92rem}
   .bar .home{color:var(--ink)}
+  .bar .home{display:inline-flex;align-items:center;gap:9px}
   .bar nav a{margin-left:20px;color:var(--ink-soft)}
   .bar nav a.active{color:var(--gold-deep)}
 
@@ -45,6 +47,13 @@
   td b{color:var(--ink)}
   td a{font-weight:700}
 
+  .jump{display:flex;flex-wrap:nowrap;gap:7px;margin:0 0 22px;margin-left:calc(50% - 50vw);width:100vw;
+    overflow-x:auto;padding:0 max(24px, calc(50vw - 356px)) 4px}
+  .jump a{flex:none;font-size:.8rem;font-weight:600;text-decoration:none;color:var(--ink);
+    background:var(--sand);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+  .jump a:hover{border-color:var(--gold);color:var(--gold-deep)}
+  .jump a.active{border-color:var(--gold);color:var(--gold-deep)}
+
   .callout{background:#FBF3E2;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:16px 18px;margin:8px 0 6px}
   .callout .ct{font-weight:700;color:var(--gold-deep);margin-bottom:3px}
   .callout p{margin:0;color:var(--ink-soft)}
@@ -58,8 +67,8 @@
 <body>
 
 <div class="bar"><div class="row">
-  <a class="home" href="index.html">&larr; One Primary Purpose</a>
-  <nav><a href="guidelines.html" class="active">Guidelines</a><a href="service-positions.html">Service positions</a><a href="guides.html">Guides</a><a href="resources.html">Resources</a></nav>
+  <a class="home" href="index.html"><svg class="na-mark" width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="28.5" stroke="#BC8438" stroke-width="4"/><path d="M32 9 55 32 32 55 9 32Z" stroke="#BC8438" stroke-width="2.5" opacity=".55"/><text x="32" y="39.5" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="20" fill="#20313F">NA</text></svg>One Primary Purpose</a>
+  <nav><a href="guidelines.html" class="active">Guidelines</a><a href="resources.html">Resources</a></nav>
 </div></div>
 
 <header class="head"><div class="row">
@@ -70,16 +79,23 @@
 
 <main><div class="wrap">
 
-  <div class="callout">
-    <div class="ct">Draft for group conscience</div>
-    <p>This is a working draft. The items in <span class="ph">gold</span> are choices for the group to make and fill in before adopting. Bring it to a Business Meeting for group conscience.</p>
+
+  <div class="jump">
+    <a href="guidelines.html" class="active">Group Guidelines</a>
+    <a href="guidelines/secretary/">Secretaries</a>
+    <a href="guidelines/zoom-host/">Zoom Host</a>
+    <a href="guidelines/zoom-cohost/">Zoom Co-Host</a>
+    <a href="guidelines/gsr/">GSR</a>
+    <a href="guidelines/alt-gsr/">Alt GSR</a>
+    <a href="guidelines/treasurer/">Treasurer</a>
+    <a href="guidelines/business-chair/">Business Mtg. Chair</a>
   </div>
 
   <div class="sec">
     <h2>Purpose and Function</h2>
     <p>These guidelines were developed to help the group carry the NA message of recovery more effectively. They reflect the experience, strength, and hope of this group. All members are encouraged to read them and abide by them so the group can continue to carry the message.</p>
     <p>This group adheres to the Twelve Steps and Twelve Traditions of Narcotics Anonymous.</p>
-    <p>For anything not addressed in these guidelines, the group follows the <span class="ph">[ local Area Guide to Local Services — confirm name ]</span>.</p>
+    <p>For anything not addressed in these guidelines, the group follows <a href="https://na.org/wp-content/uploads/2024/06/EN-GLS-English-Jan2024.pdf" target="_blank" rel="noopener"><em>A Guide to Local Services in Narcotics Anonymous</em></a> and the practices of the <a href="https://www.sjna.org/" target="_blank" rel="noopener">Greater San Jose Area</a> Service Committee.</p>
   </div>
 
   <div class="sec">
@@ -97,7 +113,7 @@
     <h2>Financial Operations</h2>
     <p>Prudent, responsible management of the group's funds safeguards its ability to carry the message of recovery. All financial resources are dedicated to that purpose.</p>
     <h3>Prudent Reserve</h3>
-    <p>The group keeps a prudent reserve of <span class="ph">$ ____</span> to cover its regular expenses, such as rent and coffee.</p>
+    <p>The group keeps a prudent reserve of <strong>$200</strong> to cover its regular expenses, such as rent and coffee.</p>
     <h3>Seventh Tradition</h3>
     <p>The Seventh Tradition is the group's sole source of funds. In-person members contribute to the basket; Zoom members may contribute via Venmo at <a href="https://venmo.com/u/Steve-Melton-8">@Steve-Melton-8</a>, posted in the chat.</p>
     <p>After the group's expenses are paid and the prudent reserve is maintained, the group decides by conscience at the monthly Business Meeting how much, if any, to donate to the next level of service (for example, Area).</p>
@@ -118,24 +134,12 @@
     </ol>
   </div>
 
-  <div class="sec">
-    <h2>Trusted Servant Positions</h2>
-    <p>Service positions are filled by group conscience. The roster below is a summary — each position's detailed duties live on the <a href="service-positions.html">Service positions</a> page.</p>
-    <table>
-      <tr><th>Position</th><th>Role</th></tr>
-      <tr><td><a href="service-positions.html#secretaries"><b>Secretaries</b></a></td><td>A rotation of three who take turns running the meeting using the approved format.</td></tr>
-      <tr><td><a href="service-positions.html#zoom-host"><b>Zoom Host</b></a></td><td>Runs the meeting on Zoom and holds the host controls and security settings.</td></tr>
-      <tr><td><a href="service-positions.html#zoom-cohost"><b>Zoom Co-Host</b></a></td><td>Security partner; attends in person and runs the Zoom side from the second computer.</td></tr>
-      <tr><td><a href="service-positions.html#gsr"><b>GSR &amp; Alternate</b></a></td><td>Represent the group at Area and report back.</td></tr>
-      <tr><td><a href="service-positions.html#treasurer"><b>Treasurer</b></a></td><td>Cares for the group's funds and maintains the prudent reserve.</td></tr>
-      <tr><td><a href="service-positions.html#business-chair"><b>Business Mtg. Chair</b></a></td><td>Leads the Business Meeting <span class="ph">(may be a Secretary or a separate position — group to decide)</span>.</td></tr>
-    </table>
-  </div>
+
 
 </div></main>
 
 <footer><div class="wrap">
-  <a href="index.html">&larr; Back to welcome</a> &nbsp;·&nbsp; <a href="service-positions.html">Service positions &rarr;</a>
+  <a href="index.html">&larr; Back to welcome</a> &nbsp;·&nbsp; <a href="resources.html">Resources &rarr;</a>
 </div></footer>
 </body>
 </html>

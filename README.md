@@ -8,8 +8,12 @@ A static site (plain HTML, no build step). Hosted on GitHub Pages.
 
 - `index.html` — welcome / home
 - `guidelines.html` — group guidelines
-- `service-positions.html` — trusted-servant positions
-- `resources.html` — meeting script + Zoom host/co-host setup
+- `guidelines/<position>/` — per-position guidelines (secretary, zoom-host, zoom-cohost, gsr, treasurer, business-chair)
+- `resources.html` — resource hub
+- `resources/secretary/` — meeting script + secretary rotation (protected)
+- `resources/zoom-host/` + `resources/zoom-cohost/` — Zoom setup with screenshots (protected)
+- `resources/business-meetings/` — business meeting minutes, filterable by month (protected)
+- `favicon.svg` — NA mark, also inlined in each page's top bar
 
 ## Local preview
 

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Welcome to One Primary Purpose</title>
 <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +40,7 @@
   .bar .row{max-width:980px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
   .bar a{text-decoration:none;font-weight:600;font-size:.92rem}
   .bar .home{color:var(--ink)}
+  .bar .home{display:inline-flex;align-items:center;gap:9px}
   .bar nav a{margin-left:20px;color:var(--ink-soft)}
   .bar nav a:hover{color:var(--gold-deep)}
   .bar nav a.active{color:var(--gold-deep)}
@@ -74,6 +76,8 @@
     color:var(--ink);backdrop-filter:blur(2px);
   }
   .fact svg{flex:none}
+  a.fact{text-decoration:none;color:var(--gold-deep);transition:border-color .15s}
+  a.fact:hover{border-color:var(--gold)}
   .fact .ph{color:var(--gold-deep)}
 
   /* ---------- SECTIONS ---------- */
@@ -111,6 +115,10 @@
   .ph-pill{display:inline-block;background:rgba(188,132,56,.12);border:1px dashed var(--gold);
     color:var(--gold-deep);padding:2px 9px;border-radius:7px;font-size:.86rem;font-weight:700}
   .note{font-size:.92rem;color:var(--ink-soft);margin-top:16px}
+  .btn-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+    background:var(--gold);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;
+    padding:11px 20px;border-radius:999px;transition:background .15s}
+  .btn-link:hover{background:var(--gold-deep)}
 
   /* newcomer */
   .new-lead{font-family:"Fraunces",serif;font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.35;
@@ -176,8 +184,8 @@
 <body>
 
 <div class="bar"><div class="row">
-  <a class="home active" href="index.html">One Primary Purpose</a>
-  <nav><a href="guidelines.html">Guidelines</a><a href="service-positions.html">Service positions</a><a href="guides.html">Guides</a><a href="resources.html">Resources</a></nav>
+  <a class="home active" href="index.html"><svg class="na-mark" width="22" height="22" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="28.5" stroke="#BC8438" stroke-width="4"/><path d="M32 9 55 32 32 55 9 32Z" stroke="#BC8438" stroke-width="2.5" opacity=".55"/><text x="32" y="39.5" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="20" fill="#20313F">NA</text></svg>One Primary Purpose</a>
+  <nav><a href="guidelines.html">Guidelines</a><a href="resources.html">Resources</a></nav>
 </div></div>
 
 <header class="hero">
@@ -212,6 +220,10 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F8C84" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
         Closed meeting
       </span>
+      <a class="fact" href="guidelines.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC8438" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+        Group Guidelines
+      </a>
     </div>
   </div>
 </header>
@@ -290,7 +302,10 @@
           <p>Held the second Sunday of each month, right after the meeting. All are welcome, and everyone there has a voice and a vote.</p>
         </div>
       </div>
-      <p class="note">Read the <a href="guidelines.html">full group guidelines</a> and the <a href="service-positions.html">guidelines for each service position</a>.</p>
+      <a class="btn-link reveal" href="guidelines.html">Read the Group Guidelines
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="note">Each service position&apos;s guidelines are linked from there.</p>
     </div>
   </section>
 
@@ -300,12 +315,13 @@
       <div class="sec-head reveal"><span class="num">4</span><h2>Trusted servants</h2></div>
       <p class="reveal" style="max-width:54ch;color:var(--ink-soft);margin-top:-14px">Service keeps the meeting alive. These positions are filled by group conscience, one addict helping the next.</p>
       <div class="roster reveal">
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#secretaries"><b>Secretaries</b></a> &mdash; three who rotate running the meeting</span></div>
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#zoom-host"><b>Zoom Host</b></a> &mdash; runs and protects the meeting online</span></div>
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#zoom-cohost"><b>Zoom Co-Host</b></a> &mdash; security partner at the second computer</span></div>
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#gsr"><b>GSR &amp; Alternate</b></a> &mdash; represent us at Area</span></div>
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#treasurer"><b>Treasurer</b></a> &mdash; cares for the group's funds</span></div>
-        <div class="role"><span class="dot"></span><span><a href="service-positions.html#business-chair"><b>Business Mtg. Chair</b></a> &mdash; leads the business meeting</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/secretary/"><b>Secretaries</b></a> &mdash; three who rotate running the meeting</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/zoom-host/"><b>Zoom Host</b></a> &mdash; runs and protects the meeting online</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/zoom-cohost/"><b>Zoom Co-Host</b></a> &mdash; security partner, remote or at the second computer</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/gsr/"><b>GSR</b></a> &mdash; represents us at Area</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/alt-gsr/"><b>Alternate GSR</b></a> &mdash; backs up the GSR</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/treasurer/"><b>Treasurer</b></a> &mdash; cares for the group's funds</span></div>
+        <div class="role"><span class="dot"></span><span><a href="guidelines/business-chair/"><b>Business Mtg. Chair</b></a> &mdash; leads the business meeting</span></div>
       </div>
     </div>
   </section>
