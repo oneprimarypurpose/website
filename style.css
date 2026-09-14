@@ -1,0 +1,172 @@
+/* One Primary Purpose — shared styles
+   Plain static site, no build step. Edit the look in one place here.
+   Design tokens live in :root; pages just use the classes below. */
+
+:root{
+  --paper:#F7F4EF;--sand:#EFE8DC;--ink:#20313F;--ink-soft:#4C5C68;--ink-faint:#76838C;
+  --gold:#BC8438;--gold-deep:#9A6A26;--sage:#6F8C84;
+  --line:rgba(32,49,63,.12);--line-soft:rgba(32,49,63,.07);
+  --shadow:0 1px 2px rgba(32,49,63,.04),0 12px 30px -18px rgba(32,49,63,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:"Mulish",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:500;color:var(--ink);margin:0}
+a{color:var(--gold-deep)}
+.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+.ph{color:var(--gold-deep);font-weight:700}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:rgba(247,244,239,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .row{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.bar a{text-decoration:none;font-weight:600;font-size:.92rem}
+.bar .home{color:var(--ink)}
+.bar nav a{margin-left:20px;color:var(--ink-soft)}
+.bar nav a.active{color:var(--gold-deep)}
+
+/* page header */
+.head{background:var(--sand);border-bottom:1px solid var(--line)}
+.head .row{max-width:1000px;margin:0 auto;padding:50px 24px}
+.head .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+.head h1{font-size:clamp(2.1rem,5.4vw,3.3rem);line-height:1.05;letter-spacing:-.015em;margin-top:13px}
+.head .lead{margin:15px 0 0;max-width:54ch;color:var(--ink-soft);font-size:1.1rem}
+
+/* jump / synopsis chips */
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 8px}
+.jump a{font-size:.86rem;font-weight:600;text-decoration:none;color:var(--ink);background:var(--sand);border:1px solid var(--line);padding:6px 13px;border-radius:999px}
+.jump a:hover{border-color:var(--gold);color:var(--gold-deep)}
+
+main{padding:32px 0 10px}
+
+/* requirements / general box */
+.req{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:6px 0 26px}
+.req h2{font-size:1.15rem;margin:0 0 8px}
+.req p{margin:0 0 8px;color:var(--ink-soft)}
+.req ul{margin:0;padding-left:20px;color:var(--ink-soft)}
+
+/* a role block (used on a position page or stacked on a hub) */
+.role{padding:30px 0;border-top:1px solid var(--line);scroll-margin-top:72px}
+.role:first-of-type{border-top:0}
+.role .rolehead{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.role .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+.role h2{font-size:1.7rem;letter-spacing:-.01em;margin:6px 0 0}
+.role .summary{font-family:"Fraunces",serif;font-size:1.12rem;color:var(--ink);margin:10px 0 0;font-weight:400}
+.role h3{font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);margin:24px 0 4px;font-family:"Mulish",sans-serif;font-weight:700}
+.role p{margin:8px 0;color:var(--ink-soft)}
+ul,ol{margin:8px 0;padding-left:22px;color:var(--ink-soft)}
+li{margin:7px 0}
+strong,b{color:var(--ink);font-weight:700}
+.more{font-size:.92rem;color:var(--ink-faint);margin-top:14px}
+
+/* at-a-glance row (e.g., Zoom when / ID / passcode) */
+.glance{display:flex;flex-wrap:wrap;gap:14px 30px;background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:8px 0 4px}
+.glance .k{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+.glance .v{font-weight:600;color:var(--ink);font-family:"Fraunces",serif;font-size:1.08rem;margin-top:2px}
+
+/* print button */
+.printbtn{flex:none;background:none;border:1px solid var(--line);color:var(--ink-soft);font:inherit;font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:999px;cursor:pointer}
+.printbtn:hover{border-color:var(--gold);color:var(--gold-deep)}
+
+/* callouts */
+.callout{background:#FBF3E2;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;margin:16px 0}
+.callout.warn{border-left-color:#C0392B;background:#FBEEEC}
+.callout .ct{font-weight:700;color:var(--gold-deep);margin-bottom:2px}
+.callout.warn .ct{color:#C0392B}
+.callout p{margin:4px 0;color:var(--ink-soft)}
+.callout p:first-child{margin-top:0}
+.callout p:last-child{margin-bottom:0}
+
+/* paste-ready chat snippet */
+.paste{background:var(--paper);border:1px dashed var(--gold);border-radius:8px;padding:9px 13px;margin:8px 0;color:var(--ink);font-size:.96rem}
+
+/* synopsis / link cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:10px}
+.pcard{display:block;background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:20px 22px;text-decoration:none;transition:border-color .2s ease,transform .2s ease}
+.pcard:hover{border-color:var(--gold);transform:translateY(-2px)}
+.pcard .tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold-deep)}
+.pcard h3{font-size:1.3rem;margin:6px 0 6px}
+.pcard p{margin:0;color:var(--ink-soft);font-size:.96rem}
+.pcard .go{display:inline-block;margin-top:12px;font-weight:700;font-size:.9rem;color:var(--gold-deep)}
+
+/* resource list */
+.reslist{list-style:none;padding-left:0;margin:8px 0}
+.reslist li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--line-soft)}
+.reslist li:first-child{border-top:0}
+.reslist .rk{flex:none;width:150px;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--ink-faint)}
+.reslist .rv{color:var(--ink-soft)}
+.reslist .rv b{color:var(--ink)}
+@media(max-width:600px){.reslist li{flex-direction:column;gap:2px}.reslist .rk{width:auto}}
+
+/* prev / next pager (between position pages) */
+.pn{display:flex;justify-content:space-between;gap:14px;margin:34px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.pn a{text-decoration:none;font-weight:600;color:var(--ink);font-size:.95rem;max-width:48%}
+.pn a:hover{color:var(--gold-deep)}
+.pn .lbl{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:700;margin-bottom:2px}
+.pn .nx{text-align:right;margin-left:auto}
+
+/* interactive checklist (Zoom guides) */
+.checkbar{display:flex;align-items:center;gap:12px;margin:16px 0 6px;padding:9px 16px;background:var(--sand);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow)}
+.checkbar .track{flex:1;height:8px;background:var(--line);border-radius:999px;overflow:hidden}
+.checkbar .fill{display:block;height:100%;width:0;background:var(--gold);transition:width .3s ease}
+.checkbar .pct{font-size:.78rem;font-weight:700;color:var(--ink-soft);white-space:nowrap}
+.checkbar .resetbtn{flex:none;background:none;border:1px solid var(--line);color:var(--ink-soft);font:inherit;font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:999px;cursor:pointer}
+.checkbar .resetbtn:hover{border-color:var(--gold);color:var(--gold-deep)}
+.checkbar .done-tag{display:none;font-size:.76rem;font-weight:700;color:var(--gold-deep)}
+.checkbar.complete .done-tag{display:inline}
+.checkbar.complete .fill{background:var(--gold-deep)}
+.checklist{list-style:none;padding-left:0}
+.checklist>li.check{position:relative;padding-left:40px;margin:11px 0}
+.checklist>li .cbox{position:absolute;left:0;top:1px;width:24px;height:24px;border:2px solid var(--gold-deep);border-radius:7px;background:#fff;cursor:pointer;transition:background .15s ease,border-color .15s ease}
+.checklist>li .cbox:hover{border-color:var(--gold);background:#FBF3E2}
+.checklist>li.done>.cbox{background:var(--gold-deep);border-color:var(--gold-deep)}
+.checklist>li.done>.cbox:after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.checklist>li.done{color:var(--ink-faint)}
+.checklist>li.done>b,.checklist>li.done>strong{color:var(--ink-faint);font-weight:600}
+.cbox:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+
+/* guidelines page — stacked sections + roster table */
+.sec{padding:22px 0 26px;border-top:1px solid var(--line-soft)}
+.sec:first-of-type{border-top:0}
+.sec h2{font-size:1.5rem;letter-spacing:-.01em;margin:0 0 4px}
+.sec h3{font-size:1.12rem;margin:18px 0 2px}
+.sec p{margin:10px 0;color:var(--ink-soft)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.97rem}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+td b{color:var(--ink)}
+td a{font-weight:700}
+
+/* resources page — feature card + button */
+.card{background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:6px 0 14px;box-shadow:var(--shadow)}
+.card h2{font-size:1.25rem;margin:0 0 4px}
+.card p{margin:6px 0 0;color:var(--ink-soft)}
+.card .meta{font-size:.92rem;color:var(--ink-faint);margin-top:10px}
+.card .meta b{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--gold);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:11px 20px;border-radius:999px;transition:background .15s}
+.btn:hover{background:var(--gold-deep)}
+.note{font-size:.88rem;color:var(--ink-faint);margin-top:12px}
+
+footer{background:var(--ink);color:#cdd6dc;padding:40px 0;text-align:center;font-size:.92rem;margin-top:34px}
+footer a{color:#E2B873;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:4px}
+@media(max-width:680px){.bar nav a{margin-left:14px}.cards{grid-template-columns:1fr}}
+
+/* PRINT — clean hard-copy handouts */
+@media print{
+  .bar,.jump,.head .lead,.head .eyebrow,footer,.printbtn,.checkbar,.pn{display:none !important}
+  body{background:#fff;font-size:12pt}
+  .head{background:#fff;border:none}
+  .head .row{padding:0 0 8px}
+  .head h1{font-size:20pt;margin:0}
+  .wrap{max-width:none;padding:0}
+  main{padding:0}
+  .role{border-top:1px solid #000;page-break-inside:avoid;break-inside:avoid;padding:14px 0}
+  .req{border:1px solid #000;box-shadow:none}
+  a{color:#000;text-decoration:none}
+  .callout{border:1px solid #000;background:#fff}
+  .glance{border:1px solid #000;background:#fff}
+  .checklist>li .cbox{border:1.5px solid #000;background:#fff !important}
+  .checklist>li.done>.cbox:after{border-color:#000}
+  .checklist>li.done,.checklist>li.done>b,.checklist>li.done>strong{color:#000}
+}
